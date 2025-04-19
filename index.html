@@ -4,120 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shinrin</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--Montserrat font-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>   
-    <section>
-      <!-- MOBILE NAVIGATION -->
-      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-none">Shinrin</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
+
+  <body style="font-family: 'Montserrat', sans-serif;">
+    <!-- MOBILE NAVIGATION -->
+    <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+      <a href="#home" class="w3-bar-item w3-button">Shinrin</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="toggleNavigation()">☰</a>
+    </div>
+
+    <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+      <a href="#pitch" class="w3-bar-item w3-button" onclick="toggleNavigation()">Pitch</a>
+      <a href="#theme" class="w3-bar-item w3-button" onclick="toggleNavigation()">Nurture Yourself With Nature</a>
+      <a href="#why" class="w3-bar-item w3-button" onclick="toggleNavigation()">My Why</a>
+    </div>
+
+    <!-- SOCIAL SECTION -->
+    <section class="image-section w3-quarter w3-fixed w3-padding-small">
+      <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;" alt="Avatar" />
+      <div class="links w3-margin-top w3-padding-small">
+        <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
+          <i data-feather="linkedin"></i>
+        </a>
       </div>
-      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
-        <a href="#pitch" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()"></a>
-        <a href="#theme" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">Nurture Yourself With Nature</a>
-        <a href="#why" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()"></a>
+    </section>
 
-      <!-- SOCIAL SECTION -->
-      <section class="image-section w3-quarter w3-fixed w3-padding-small">
-        <!--IMAGE/AVATAR-->
-        <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
-        <!--S0CIAL NETWORK BUTTONS-->
-        <div class="links w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
-             <i data-feather="linkedin"></i>
-          </a>
-        </div>
-        
-       
-      </section>
+    <!-- CONTENT SECTION -->
+    <section class="w3-threequarter w3-padding-large w3-right">
+      <!-- DESKTOP NAV -->
+      <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+        <a href="#home" class="w3-bar-item w3-button">Shinrin</a>
+        <a href="#pitch" class="w3-bar-item w3-button w3-right">Pitch</a>
+        <a href="#theme" class="w3-bar-item w3-button w3-right">Theme</a>
+        <a href="#why" class="w3-bar-item w3-button w3-right">My Why</a>
+      </div>
 
-      <!-- CONTENT SECTION-->
-      <section class="w3-threequarter w3-padding-large w3-right">
-        <!--DESKTOP NAVIGATION-->
-        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Shinrin</a>
-          <a href="#why" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">I picked this theme because Nature has always been extremeley important to me. I have always grown up around Nature, even when I was a kid, constantly going outside during the summer and exploring the environment around me. I still do this, even as the internet is an extremely influential apart of many kids life, as well as mine. I want to share my love for Nature with those who may not understand it as well, and one of the best way to do that I found, is through this game.</a>
-          <a href="#theme" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">Nurture Yourself With Nature</a>
-          <a href="#pitch" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">Shinrin, a town once isolated from civilization and shaped through the guidance of nature for many generations, is slowly forgetting its own history! Now, it is up to you, the player, to reteach the townsfolk what it means to be connected with nature once again. With its captivating world, rich story, and emphasis on nature’s beauty, Shinrin offers a unique adventure where every decision shapes the town’s future.
-
-</a></a>
-        </div>
-        <div class="content-container w3-margin-top-2">
-          <!--HOME SECTION-->
-          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
-            <center>
+      <div class="content-container">
+        <!-- HOME SECTION -->
+        <div id="home" class="w3-container w3-margin-top-4 w3-cursive">
+          <center>
             <p style="font-style: italic; font-size:x-large;">"The mind is the limit. When you face your struggles, you overcome them."</p>
             <h1>Shinrin</h1>
-            <h2>Nafisa Nawshin (HS Junior )</h2>
+            <h2>Nafisa Nawshin (HS Junior)</h2>
             <h3>Game Developer in the Making</h3>
-            <p></p></center>
-          </div>
-<div> <!-- you May use a video
-  <video width="1000" height="740" controls>
-  <source src="movie.mp4" type="video/mp4">
-</video>
-  
-  -->
-  <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/xXnuaCXU2NIncxOwOfdVzHh261yXmJE6xguSA0BZ2Bc/embed"></iframe>
+          </center>
+        </div>
 
-  <!--<iframe src="https://play.unity.com/en/games/1ac0fb59-0583-4d44-89f3-0dec0e5a0b2e/rab-to-g4c" height="700" width="900" title="Iframe Example"></iframe>
---></div>
-          <!--pitch SECTION-->
-          <div id="pitch" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">PITCH</h2>
-            <p class="w3-margin-top-2"> 
-              Shinrin, a town once isolated from civilization and shaped through the guidance of nature for many generations, is slowly forgetting its own history!
-              Now, it is up to you, the player, to reteach the townsfolk what it means to be connected with nature once again. 
-              With its captivating world, rich story, and emphasis on nature’s beauty, Shinrin offers a unique adventure where every decision shapes the town’s future.
-            </p>
-           
-            
-          </div>
-           <!--Theme SECTION-->
-          <div id="theme" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Nurture Yourself With Nature</h2>
-            <p class="w3-margin-top-2"> 
-              Learn how to be more connected with the Nature surrounding you every day!
-            </p>
-            
-            
-          </div>
+        <!-- GAME IFRAME -->
+        <div class="w3-margin-top">
+          <iframe width="392" height="620" style="border: 0;" src="https://studio.code.org/projects/applab/xXnuaCXU2NIncxOwOfdVzHh261yXmJE6xguSA0BZ2Bc/embed"></iframe>
+        </div>
 
-           <!--Why SECTION-->
-          <div id="why" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY WHY</h2>
-            <p class="w3-margin-top-2"> 
-             I picked this theme because Nature has always been extremeley important to me.
-              I have always grown up around Nature, even when I was a kid, constantly going outside during the summer and exploring the environment around me. 
-              I still do this, even as the internet is an extremely influential apart of many kids life, as well as mine. 
-              I want to share my love for Nature with those who may not understand it as well, and one of the best way to do that I found, is through this game.
-            </p>
-            
-            
-          </div>
-          </div>
-       
+        <!-- PITCH -->
+        <div id="pitch" class="w3-container w3-margin-top w3-cursive w3-large">
+          <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px;">Pitch</h2>
+          <p>
+            Shinrin, a town once isolated from civilization and shaped through the guidance of nature for many generations, is slowly forgetting its own history!
+            Now, it is up to you, the player, to reteach the townsfolk what it means to be connected with nature once again. 
+            With its captivating world, rich story, and emphasis on nature’s beauty, Shinrin offers a unique adventure where every decision shapes the town’s future.
+          </p>
+        </div>
+
+        <!-- THEME -->
+        <div id="theme" class="w3-container w3-margin-top w3-cursive w3-large">
+          <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px;">Nurture Yourself With Nature</h2>
+          <p>
+            Learn how to be more connected with the Nature surrounding you every day!
+          </p>
+        </div>
+
+        <!-- WHY -->
+        <div id="why" class="w3-container w3-margin-top w3-cursive w3-large">
+          <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px;">My Why</h2>
+          <p>
+            I picked this theme because Nature has always been extremely important to me.
+            I grew up around Nature, constantly exploring the environment around me. 
+            Even with the internet being such a big part of kids' lives, including mine, I’ve always gone back to Nature for peace and inspiration.
+            This game is a way for me to share that love with others who might not understand it yet.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <script>
-      // Function to toggle mobile navigation
       function toggleNavigation() {
         let nav = document.getElementById("mobile-nav");
-        if (nav.classList.contains('w3-show')) {
-          nav.classList.remove('w3-show');
-        } else { 
-          nav.classList.add('w3-show');
-        }
+        nav.classList.toggle("w3-show");
       }
-    </script>
-    <script>
-      // Script to load feather icons
-      feather.replace()
+
+      feather.replace();
     </script>
   </body>
 </html>
