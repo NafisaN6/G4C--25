@@ -1,4 +1,12 @@
 /*General*/
+body {
+  background-image: url('forest.jpg'); 
+  background-size: cover;      /* ensures the image covers the whole screen */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  background-attachment: fixed; /* optional: makes it stay during scroll */
+}
+
 body * {
     font-family: "Montserrat", sans-serif;
   }
