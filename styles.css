@@ -1,6 +1,6 @@
 /*General*/
 body {
-  background-image: url('forest.jpg'); 
+  background-image: url('forest.jpeg'); 
   background-size: cover;      /* ensures the image covers the whole screen */
   background-repeat: no-repeat; /* prevents tiling */
   background-position: center;  /* centers the image */
