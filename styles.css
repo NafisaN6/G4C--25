@@ -208,7 +208,7 @@ body * {
 /* Background */
 body {
   background: linear-gradient(to bottom, #0b3d0b, #1f5c1f);
-  background-image: url('https://images.unsplash.com/photo-1601379322989-8f0bdecb2c90?auto=format&fit=crop&w=1600&q=80');
+  background-image: url('forest.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
